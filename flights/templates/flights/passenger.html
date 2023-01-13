@@ -1,0 +1,17 @@
+{% extends "flights/layout.html" %}
+
+{% block body %}
+<h1>Passenger:</h1>
+   <ul>
+        {% for passenger in plist %}
+            <li>
+                {{passenger.first }} {{passenger.last}}
+            </li>
+            <li>
+                <a href="mailto:{{passenger.email}}">{{passenger.email}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}
